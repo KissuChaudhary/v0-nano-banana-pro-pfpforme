@@ -4,22 +4,22 @@ const cases = [
     {
         title: 'The "Candid" Solo',
         desc: 'Laughing at a cafe, messy hair, waiting for subway.',
-        img: 'https://picsum.photos/400/600?grayscale&random=10'
+        img: '/candid-solo.png'
     },
     {
         title: 'The "Power Couple"',
         desc: 'Chemistry engine included. Night out, holding hands.',
-        img: 'https://picsum.photos/400/600?grayscale&random=11'
+        img: '/power-couple.jpg'
     },
     {
         title: 'The "Vintage" Roll',
         desc: 'Kodak Portra simulation. Nostalgic soul.',
-        img: 'https://picsum.photos/400/600?grayscale&random=12'
+        img: '/roll.jpg'
     },
     {
         title: 'The "Hinge" Fix',
         desc: 'Not staged. Not corporate. Just vibes.',
-        img: 'https://picsum.photos/400/600?grayscale&random=13'
+        img: '/hinge.png'
     },
 ];
 
@@ -63,7 +63,7 @@ export const ProductSection: React.FC = () => {
                             <img 
                                 src={item.img} 
                                 alt={item.title} 
-                                className="w-full h-full object-cover opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-100 ease-out hover:brightness-110"
+                                className="w-full h-full object-cover opacity-100 group-hover:grayscale-80 group-hover:opacity-80 transition-all duration-100 ease-out hover:brightness-110"
                             />
                         </div>
 
