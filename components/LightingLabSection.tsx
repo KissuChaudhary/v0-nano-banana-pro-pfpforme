@@ -27,8 +27,8 @@ export const LightingLabSection: React.FC = () => {
                 {[
                     { title: "Tungsten Flash", k: "3200K + FLASH", desc: "Harsh, night-out, paparazzi.", img: "/showcase18.png" },
                     { title: "Cinematic Cold", k: "5600K DAYLIGHT", desc: "Moody blue, window, soft.", img: "/showcase16.png" },
-                    { title: "Golden Hour", k: "2800K WARM", desc: "Late Night, haze, warmth.", img: "/showcase15.png" },
-                    { title: "B&W Noir", k: "MONOCHROME", desc: "High contrast, grain, 35mm.", img: "/showcase20.png" },
+                    { title: "Golden Hour", k: "2800K WARM", desc: "Late Night, haze, warmth.", img: "/showcase14.png" },
+                    { title: "B&W Noir", k: "MONOCHROME", desc: "High contrast, grain, 35mm.", img: "/showcase19.png" },
                 ].map((item, i) => (
                     <div key={i} className={`group cursor-pointer relative aspect-[3/4] overflow-hidden border-foreground/10 bg-[#111]
                             ${i % 2 === 0 ? 'border-r' : ''} 
@@ -42,7 +42,6 @@ export const LightingLabSection: React.FC = () => {
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
                             />
 
                             {/* Hover UI elements */}
