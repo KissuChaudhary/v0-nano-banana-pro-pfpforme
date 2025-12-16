@@ -31,9 +31,9 @@ export const ConsistencySection: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {[
-                        { title: 'MACRO_SCAN // PORES_VISIBLE', img: 'https://picsum.photos/600/800?grayscale&random=20' },
-                        { title: 'FULL_BODY // CONTEXT_AWARE', img: 'https://picsum.photos/600/800?grayscale&random=21' },
-                        { title: 'PROFILE // OFF_AXIS', img: 'https://picsum.photos/600/800?grayscale&random=22' }
+                        { title: 'MACRO_SCAN // PORES_VISIBLE', img: '/pores-visible.png' },
+                        { title: 'FULL_BODY // CONTEXT_AWARE', img: '/full-body.jpg' },
+                        { title: 'PROFILE // OFF_AXIS', img: '/profile.png' }
                     ].map((item, i) => (
                         <div key={i} className="relative group">
                             {/* Image Container */}
@@ -41,7 +41,7 @@ export const ConsistencySection: React.FC = () => {
                                 <img 
                                     src={item.img} 
                                     alt="Identity Consistency" 
-                                    className="w-full h-full object-cover opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                                    className="w-full h-full object-cover opacity-90 group-hover:opacity-70 group-hover:grayscale-50 transition-all duration-300"
                                 />
                                 
                                 {/* Face Mesh Overlay */}
