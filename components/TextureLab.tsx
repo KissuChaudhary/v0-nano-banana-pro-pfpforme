@@ -58,7 +58,8 @@ export const TextureLabSection: React.FC = () => {
             >
               <div className="bg-black/80 backdrop-blur border border-foreground/20 px-4 py-2">
                 <span className="font-mono text-xs text-accent animate-pulse uppercase tracking-widest">
-                  [ Hover to Inspect Texture ]
+                  <span className="md:hidden">[ Tap to Inspect Texture ]</span>
+                  <span className="hidden md:inline">[ Hover to Inspect Texture ]</span>
                 </span>
               </div>
             </div>

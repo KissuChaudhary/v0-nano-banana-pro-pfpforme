@@ -2,112 +2,132 @@
 import type React from "react"
 import { useEffect, useState } from "react"
 
+const COLUMN_1_IMAGES = [
+  { src: "/showcase10.png", aspect: "aspect-[3/4]" },
+  { src: "/showcase8.png", aspect: "aspect-[16/9]" },
+  { src: "/showcase3.png", aspect: "aspect-[9/16]" },
+  { src: "/showcase5.png", aspect: "aspect-[4/3]" },
+  { src: "/showcase1.png", aspect: "aspect-[3/4]" },
+]
+
+const COLUMN_2_IMAGES = [
+  { src: "/showcase4.png", aspect: "aspect-[3/4]" },
+  { src: "/showcase7.png", aspect: "aspect-[16/9]" },
+  { src: "/showcase9.png", aspect: "aspect-[9/16]" },
+  { src: "/showcase2.png", aspect: "aspect-[4/3]" },
+  { src: "/showcase6.png", aspect: "aspect-[3/4]" },
+]
+
 export const FullFrameSection: React.FC = () => {
-  const [isFullFrame, setIsFullFrame] = useState(false)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFullFrame((prev) => !prev)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <section className="py-24 border-b border-foreground/10 bg-[#080808] overflow-hidden">
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-        {/* Copy Side */}
-        <div className="order-2 md:order-1">
-          <h2 className="font-display text-4xl md:text-6xl font-bold uppercase leading-[0.9] mb-8">
-            Don't just get <br /> a Headshot. <br />
-            <span className="text-foreground/30">Get the whole scene.</span>
-          </h2>
+    <section className="h-screen min-h-[800px] grid md:grid-cols-2 border-b border-foreground/10 bg-[#080808] overflow-hidden">
+      {/* Copy Side (Left) */}
+      <div className="flex flex-col justify-center p-8 md:p-20 border-r border-foreground/10 relative z-10 bg-[#080808]">
+        <h2 className="font-display text-4xl md:text-6xl font-bold uppercase leading-[0.9] mb-8">
+          Don't just get <br /> a Headshot. <br />
+          <span className="text-foreground/50">Get the whole scene.</span>
+        </h2>
 
-          <p className="font-mono text-foreground/70 mb-10 text-sm md:text-base max-w-md leading-relaxed">
-            Traditional headshots are useless on Instagram or Hinge. We generate{" "}
-            <strong className="text-white">Full-Frame Vertical (9:16)</strong> images so you have complete control.
-          </p>
+        <p className="font-mono text-foreground/70 mb-10 text-sm md:text-base max-w-md leading-relaxed">
+          Traditional headshots are useless on Instagram or Hinge. We generate{" "}
+          <strong className="text-white">Full-Frame Vertical (9:16)</strong> images so you have complete control.
+        </p>
 
-          <div className="space-y-6">
-            <div className="flex items-center gap-4 group">
-              <div className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs text-accent">
-                01
-              </div>
-              <div className="font-mono text-sm uppercase text-foreground/60 group-hover:text-foreground transition-colors">
-                Crop it for Twitter AVI
-              </div>
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 group">
+            <div className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs text-accent">
+              01
             </div>
-            <div className="flex items-center gap-4 group">
-              <div className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs text-accent">
-                02
-              </div>
-              <div className="font-mono text-sm uppercase text-foreground/60 group-hover:text-foreground transition-colors">
-                Post it for your Story
-              </div>
-            </div>
-            <div className="flex items-center gap-4 group">
-              <div className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs text-accent">
-                03
-              </div>
-              <div className="font-mono text-sm uppercase text-foreground/60 group-hover:text-foreground transition-colors">
-                Keep it for Wallpaper
-              </div>
+            <div className="font-mono text-sm uppercase text-foreground/60 group-hover:text-foreground transition-colors">
+              Crop it for Twitter AVI
             </div>
           </div>
-
-          <div className="mt-12 font-mono text-[10px] text-foreground/30">DOWNLOAD SPEC: 4K (2048x3096) // PNG</div>
+          <div className="flex items-center gap-4 group">
+            <div className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs text-accent">
+              02
+            </div>
+            <div className="font-mono text-sm uppercase text-foreground/60 group-hover:text-foreground transition-colors">
+              Post it for your Story
+            </div>
+          </div>
+          <div className="flex items-center gap-4 group">
+            <div className="w-8 h-8 flex items-center justify-center border border-foreground/20 font-mono text-xs text-accent">
+              03
+            </div>
+            <div className="font-mono text-sm uppercase text-foreground/60 group-hover:text-foreground transition-colors">
+              Keep it for Wallpaper
+            </div>
+          </div>
         </div>
 
-        {/* Visual Side - The Animation */}
-        <div className="order-1 md:order-2 flex justify-center items-center h-[600px] relative">
-          {/* Background Grid for technical feel */}
-          <div className="absolute inset-0 border border-foreground/5 bg-foreground/[0.02]">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[1px] bg-foreground/5"></div>
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[1px] bg-foreground/5"></div>
+        <div className="mt-12 font-mono text-[10px] text-foreground/30">DOWNLOAD SPEC: 4K (2048x3096) // PNG</div>
+      </div>
+
+      {/* Visual Side (Right) - Vertical Masonry */}
+      <div className="relative bg-black/50 overflow-hidden h-full">
+        {/* Context Overlay */}
+        <div className="absolute top-4 right-4 z-20 font-mono text-[10px] text-foreground/30 text-right mix-blend-difference">
+          SCROLL_AXIS: Y-VERTICAL <br />
+          GRID_LAYOUT: MASONRY
+        </div>
+
+        {/* Gradient Masks (Top/Bottom) */}
+        <div className="absolute left-0 top-0 right-0 h-32 bg-gradient-to-b from-[#080808] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 bottom-0 right-0 h-32 bg-gradient-to-t from-[#080808] to-transparent z-10 pointer-events-none"></div>
+
+        <div className="grid grid-cols-2 gap-4 h-[150%] -mt-[10%] px-4">
+          {/* Column 1 - Scrolls Up */}
+          <div className="flex flex-col gap-4 animate-scroll-up hover:[animation-play-state:paused]">
+            {[...COLUMN_1_IMAGES, ...COLUMN_1_IMAGES, ...COLUMN_1_IMAGES].map((img, i) => (
+              <div
+                key={`col1-${i}`}
+                className={`relative group w-full ${img.aspect} bg-foreground/5 border border-foreground/10 overflow-hidden hover:grayscale-80 transition-all duration-500`}
+              >
+                <img src={img.src} className="w-full h-full object-cover" alt={`Result Col 1 ${i}`} />
+                <div className="absolute top-2 left-2 font-mono text-[9px] text-white/50 bg-black/50 px-1">
+                  {i < 9 ? `0${i + 1}` : i + 1}A
+                </div>
+                {/* Selection Marker */}
+                <div className="absolute inset-0 border-4 border-accent/50 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none mix-blend-screen"></div>
+              </div>
+            ))}
           </div>
 
-          {/* The Transforming Image Container */}
-          <div
-            className="relative transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)] overflow-hidden border border-white/10 shadow-2xl"
-            style={{
-              width: isFullFrame ? "300px" : "200px",
-              height: isFullFrame ? "533px" : "200px", // 9:16 vs 1:1 roughly
-              borderRadius: isFullFrame ? "4px" : "50%",
-            }}
-          >
-            <img
-              src="/fullframe.jpg"
-              alt="Full Frame vs Crop"
-              className="absolute w-[300px] h-[533px] max-w-none object-cover transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]"
-              style={{
-                // Keep image centered during container resize
-                left: isFullFrame ? "0" : "-50px",
-                top: isFullFrame ? "0" : "-80px",
-                filter: isFullFrame ? "grayscale(90%)" : "grayscale(20%)",
-              }}
-            />
-
-            {/* Overlay Grid lines for PFP mode */}
-            <div
-              className={`absolute inset-0 border border-accent/50 rounded-full transition-opacity duration-500 ${isFullFrame ? "opacity-0" : "opacity-100"}`}
-              style={{ transform: "scale(0.95)" }}
-            ></div>
-          </div>
-
-          {/* State Labels */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-8">
-            <span
-              className={`font-mono text-xs transition-colors duration-500 ${!isFullFrame ? "text-accent font-bold" : "text-foreground/20"}`}
-            >
-              PFP_CROP
-            </span>
-            <span
-              className={`font-mono text-xs transition-colors duration-500 ${isFullFrame ? "text-accent font-bold" : "text-foreground/20"}`}
-            >
-              FULL_FRAME
-            </span>
+          {/* Column 2 - Scrolls Down */}
+          <div className="flex flex-col gap-4 animate-scroll-down hover:[animation-play-state:paused]">
+            {[...COLUMN_2_IMAGES, ...COLUMN_2_IMAGES, ...COLUMN_2_IMAGES].map((img, i) => (
+              <div
+                key={`col2-${i}`}
+                className={`relative group w-full ${img.aspect} bg-foreground/5 border border-foreground/10 overflow-hidden hover:grayscale-80 transition-all duration-500`}
+              >
+                <img src={img.src} className="w-full h-full object-cover" alt={`Result Col 2 ${i}`} />
+                <div className="absolute bottom-2 right-2 font-mono text-[9px] text-white/50 bg-black/50 px-1">
+                  {i + 1}B
+                </div>
+                {/* Selection Marker */}
+                <div className="absolute inset-0 border-4 border-accent/50 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none mix-blend-screen"></div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll-up {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(calc(-33.33% - 1rem)); }
+        }
+        @keyframes scroll-down {
+          0% { transform: translateY(calc(-33.33% - 1rem)); }
+          100% { transform: translateY(0); }
+        }
+        .animate-scroll-up {
+          animation: scroll-up 30s linear infinite;
+        }
+        .animate-scroll-down {
+          animation: scroll-down 35s linear infinite;
+        }
+      `}</style>
     </section>
   )
 }

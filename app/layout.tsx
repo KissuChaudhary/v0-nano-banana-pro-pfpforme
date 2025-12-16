@@ -24,13 +24,13 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "Nano Banana Pro Playground - Powered by Vercel AI Gateway",
+  title: "PfpFor.Me: The Anti-AI Profile Picture Generator (Candid & Real)",
   description:
-    "Nano Banana Pro: Google's newest AI image generation model. Create and edit stunning images with advanced AI capabilities through Vercel AI Gateway.",
+    "Generate hyper-realistic AI profile pictures that look 100% authentic. The only AI photo generator for candid, aesthetic, and non-studio headshots. Perfect for Hinge, Instagram, and LinkedIn.",
   keywords: [
-    "nano banana pro",
-    "nano banana",
-    "nb pro",
+    "pfpforme",
+    "pfp for me",
+    "AI profile picture generator",
     "AI image generation",
     "AI image editor",
     "Google AI",
@@ -38,40 +38,41 @@ export const metadata: Metadata = {
     "AI art generator",
     "image editing AI",
     "Google image generation",
-    "v0 nano banana",
-    "Vercel AI Gateway",
+    "pfpforme",
+    "pfp for me",
+    "AI profile picture generator",
   ],
   authors: [{ name: "v0" }],
   creator: "v0",
   publisher: "v0",
   generator: "v0.app",
-  metadataBase: new URL("https://v0nanobananapro.vercel.app"),
+  metadataBase: new URL("https://pfpfor.me"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://v0nanobananapro.vercel.app",
-    title: "Nano Banana Pro Playground - Powered by Vercel AI Gateway",
+    url: "https://pfpfor.me",
+    title: "PfpFor.Me: The Anti-AI Profile Picture Generator (Candid & Real)",
     description:
-      "Nano Banana Pro: Google's newest AI image generation model. Create and edit stunning images with advanced AI.",
-    siteName: "Nano Banana Pro",
+      "Generate hyper-realistic AI profile pictures that look 100% authentic. The only AI photo generator for candid, aesthetic, and non-studio headshots. Perfect for Hinge, Instagram, and LinkedIn.",
+    siteName: "PfpFor.Me",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nano Banana Pro Playground - AI Image Generation",
+        alt: "PfpFor.Me: The Anti-AI Profile Picture Generator (Candid & Real)",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nano Banana Pro Playground - Powered by Vercel AI Gateway",
+    title: "PfpFor.Me: The Anti-AI Profile Picture Generator (Candid & Real)",
     description:
-      "Nano Banana Pro: Google's newest AI image generation model. Create and edit stunning images with advanced AI.",
-    creator: "@vercel",
+      "Generate hyper-realistic AI profile pictures that look 100% authentic. The only AI photo generator for candid, aesthetic, and non-studio headshots. Perfect for Hinge, Instagram, and LinkedIn.",
+    creator: "Harvansh Chaudhary",
     images: ["/og-image.jpg"],
   },
   robots: {

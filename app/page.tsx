@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Cursor } from "@/components/ui/Cursor"
-import { Navbar } from "@/components/Navbar"
+import { Navbar } from "@/components/Nav"
 import { Hero } from "@/components/Hero"
 import { MoatSection } from "@/components/MoatSection"
 import { ConsistencySection } from "@/components/ConsistenceySection"
