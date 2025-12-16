@@ -75,14 +75,14 @@ export const FullFrameSection: React.FC = () => {
             }}
           >
             <img
-              src="https://picsum.photos/600/1000?grayscale&random=50"
+              src="/fullframe.jpg"
               alt="Full Frame vs Crop"
-              className="absolute w-[300px] h-[533px] max-w-none object-cover grayscale transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]"
+              className="absolute w-[300px] h-[533px] max-w-none object-cover transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]"
               style={{
                 // Keep image centered during container resize
                 left: isFullFrame ? "0" : "-50px",
                 top: isFullFrame ? "0" : "-80px",
-                filter: isFullFrame ? "grayscale(0%)" : "grayscale(100%)",
+                filter: isFullFrame ? "grayscale(90%)" : "grayscale(20%)",
               }}
             />
 
