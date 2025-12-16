@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Nano Banana Pro is your go-to AI image generation tool. Create stunning images from text, edit existing images with AI, and explore multiple aspect ratios. Powered by Google Gemini 2.5 Flash Image.",
 }
 
-export default function Home() {
+export default function AppPage() {
   return (
     <main className="min-h-screen bg-background">
       <ImageCombiner />
