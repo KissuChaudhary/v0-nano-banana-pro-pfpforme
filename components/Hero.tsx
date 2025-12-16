@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
           <Button size="lg" className="w-full sm:w-auto">
             Generate My Vibe ($19)
           </Button>
-          <span className="font-mono text-xs text-foreground/40 max-w-[200px]">
+          <span className="font-mono text-xs text-foreground/40 sm:max-w-[200px] max-w-full">
             [!] No plastic skin. No fake smiles. 100% Aesthetic.
           </span>
         </div>
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
             <img
               src="/hero2.png"
               alt="Couple in Leather Jackets"
-              className="w-full h-full object-cover opacity-80 hover:grayscale-50 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
+              className="w-full h-full object-cover opacity-90 hover:grayscale-100 hover:opacity-100 transition-all duration-100 ease-linear cursor-none"
             />
             <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur border border-foreground/20 px-2 py-1 text-[10px] font-mono uppercase">
              // 35mm film, high grain shot
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
             <img
               src="/hero1.png"
               alt="Messy Bun Morning"
-              className="w-full h-full object-cover opacity-80 hover:grayscale-50 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
+              className="w-full h-full object-cover opacity-90 hover:grayscale-100 hover:opacity-100 transition-all duration-100 ease-linear cursor-none"
             />
             <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur border border-foreground/20 px-2 py-1 text-[10px] font-mono uppercase">
              // raw mode, high shutter speed
