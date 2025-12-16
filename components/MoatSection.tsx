@@ -90,7 +90,7 @@ export const MoatSection: React.FC = () => {
                 <div className="absolute top-0 left-0 w-full p-2 text-center text-[10px] font-mono text-foreground/40 bg-black/50 backdrop-blur-sm z-10">OTHERS</div>
                 <img 
                     src="/comparegenericai.jpg" 
-                    className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity" 
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" 
                     alt="Bad AI"
                 />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
