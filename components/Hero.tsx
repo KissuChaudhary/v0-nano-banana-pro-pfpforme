@@ -39,10 +39,10 @@ export const Hero: React.FC = () => {
             <img
               src="/hero2.png"
               alt="Couple in Leather Jackets"
-              className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
+              className="w-full h-full object-cover opacity-80 hover:grayscale-50 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
             />
             <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur border border-foreground/20 px-2 py-1 text-[10px] font-mono uppercase">
-              Model: Gemini-Flash-Grain
+             // 35mm film, high grain shot
             </div>
           </div>
 
@@ -51,10 +51,10 @@ export const Hero: React.FC = () => {
             <img
               src="/hero1.png"
               alt="Messy Bun Morning"
-              className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
+              className="w-full h-full object-cover opacity-80 hover:grayscale-50 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
             />
             <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur border border-foreground/20 px-2 py-1 text-[10px] font-mono uppercase">
-              Prompt: Candid, Flash, 3am
+             // raw mode, high shutter speed
             </div>
           </div>
         </div>
