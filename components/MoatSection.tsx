@@ -89,7 +89,7 @@ export const MoatSection: React.FC = () => {
              <div className="border-r border-foreground/10 relative group h-full">
                 <div className="absolute top-0 left-0 w-full p-2 text-center text-[10px] font-mono text-foreground/40 bg-black/50 backdrop-blur-sm z-10">OTHERS</div>
                 <img 
-                    src="https://picsum.photos/600/800?grayscale&blur=2" 
+                    src="/comparegenericai.jpg" 
                     className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity" 
                     alt="Bad AI"
                 />
@@ -100,7 +100,7 @@ export const MoatSection: React.FC = () => {
              <div className="relative group h-full overflow-hidden">
                 <div className="absolute top-0 left-0 w-full p-2 text-center text-[10px] font-mono text-accent bg-black/50 backdrop-blur-sm z-10 font-bold tracking-wider">PFPFOR.ME</div>
                 <img 
-                    src="https://picsum.photos/600/800?grayscale&random=3" 
+                    src="/comparepfpforme.png" 
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:brightness-110 group-hover:scale-105 transition-all duration-700 ease-out" 
                     alt="Our AI"
                 />
