@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
           {/* Image 1 */}
           <div className="relative overflow-hidden border-b border-foreground/10 h-full w-full">
             <img
-              src="https://picsum.photos/800/800?grayscale&random=1"
+              src="/hero2.png"
               alt="Couple in Leather Jackets"
               className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
             />
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
           {/* Image 2 */}
           <div className="relative overflow-hidden h-full w-full">
             <img
-              src="https://picsum.photos/800/800?grayscale&random=2"
+              src="/hero1.png"
               alt="Messy Bun Morning"
               className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-100 ease-linear hover:brightness-125 cursor-none"
             />
